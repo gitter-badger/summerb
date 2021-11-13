@@ -7,7 +7,7 @@ Since 2015, summerb  was used in a number of commercial and personal projects, p
 Some of the mostly used libraries are:
  * [*EasyCrud*](summerb-easycrud/README.md) - JdbcTemplate-based CRUD functionality designed for simplicity, but also has validation, security and extensibility build-in
  * [*DB Upgrade*](summerb-dbupgrade/README.md) - Simplistic approach for migrating your DB (way simpler than flyway and liquibase)
- * [*Users*](summerb-users/README.md) - implementation of repositories for Users and Permissions
+ * [*Users*](summerb-users/README.md) - implementation of repositories for Users and Permissions (suitable for ACL style)
  * [*Validation*](summerb-validation/README.md) - a library designed for business-logic validation (most appropriate for service layer, NOT facade)
  * [*Internationalization (i18n)*](summerb-i18n/README.md) - elementary primitives for user language agnostic messages
 
