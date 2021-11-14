@@ -33,29 +33,38 @@ In above examples you need to replace:
  * Replace `beanName` with a bean name. Just make sure you register a bean that extends `UpgradePackageFactory`
  
 ### Step 3: Configure DB Upgrade in your Spring context
-Create a configuration file
+Create a configuration file, usually it will look something like this:
 ```java
 @Configuration
 public class DbUpgradeConfig extends DbUpgradeConfigAdapter {
+	@Autowired
+	ResourcePatternResolver resourcePatternResolver;
 
-  // NOTE 1: If DataSource bean is not yet available, then put declaration here as well
+	@Override
+	protected UpgradePackageMetaResolver upgradePackageMetaResolver() throws Exception {
+		return new UpgradePackageMetaResolverClasspathImpl(resourcePatternResolver, "classpath:/db/*");
+	}
 
-  // NOTE 2: If one of your upgrade steps refers to a custom bean, it should be declared here as well
-  
+	@Bean
+	DbUpgradeTrigger dbUpgradeTrigger(DbUpgrade dbUpgrade) {
+		return new DbUpgradeTrigger(dbUpgrade);
+	}
 }
 ```
-
 
 _NOTE: Potentially you can use it even without Spring Context, but you anyways will have to include spring-jdbc in you dependencies_
 
 ### Step 4: Ensure DB upgrades will be done prior any other application work
 Configure this by adding TBD annotation like this
 ```java
-class asdasd {}
+@Configuration
+@DependsOn("dbUpgradeTrigger")
+public class CommonConfig {
+	// ...
+}
 ```
 
-
-## Step 5: Profit
+### Step 5: Profit
 Thats it, you're ready to go.
 
 ## Alternatives
