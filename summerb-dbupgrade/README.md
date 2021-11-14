@@ -44,12 +44,14 @@ public class DbUpgradeConfig extends DbUpgradeConfigAdapter {
   
 }```
 
+
 _NOTE: Potentially you can use it even without Spring Context, but you anyways will have to include spring-jdbc in you dependencies_
 
 ## Step 4: Ensure DB upgrades will be done prior any other application work
 Configure this by adding TBD annotation like this
 ```java
 TBD```
+
 
 ## Step 5: Profit
 Thats it, you're ready to go.
