@@ -32,7 +32,7 @@ In above examples you need to replace:
  * Replace `version` with your DB version, i.e. `001`. Application interprets `version` as `int` and sorts accordingly. Suggestion to name files with preceding zeros is purely for your convenience when looking at them in package explorer or in file browser.
  * Replace `beanName` with a bean name. Just make sure you register a bean that extends `UpgradePackageFactory`
  
-## Step 3: Configure DB Upgrade in your Spring context
+### Step 3: Configure DB Upgrade in your Spring context
 Create a configuration file
 ```java
 @Configuration
@@ -48,7 +48,7 @@ public class DbUpgradeConfig extends DbUpgradeConfigAdapter {
 
 _NOTE: Potentially you can use it even without Spring Context, but you anyways will have to include spring-jdbc in you dependencies_
 
-## Step 4: Ensure DB upgrades will be done prior any other application work
+### Step 4: Ensure DB upgrades will be done prior any other application work
 Configure this by adding TBD annotation like this
 ```java
 class asdasd {}
