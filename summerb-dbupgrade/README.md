@@ -42,7 +42,8 @@ public class DbUpgradeConfig extends DbUpgradeConfigAdapter {
 
   // NOTE 2: If one of your upgrade steps refers to a custom bean, it should be declared here as well
   
-}```
+}
+```
 
 
 _NOTE: Potentially you can use it even without Spring Context, but you anyways will have to include spring-jdbc in you dependencies_
@@ -50,7 +51,8 @@ _NOTE: Potentially you can use it even without Spring Context, but you anyways w
 ## Step 4: Ensure DB upgrades will be done prior any other application work
 Configure this by adding TBD annotation like this
 ```java
-TBD```
+class asdasd {}
+```
 
 
 ## Step 5: Profit
