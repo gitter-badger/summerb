@@ -15,7 +15,7 @@ A super-simple tool to embed you DB upgrade process into your application.
  1. Checks if DB version is lower than defined by upgrade scripts
  1. Execute scripts and records version in DB Version table
 
-## Test with databases
+## Tested with databases
  * MariaDB (MySQL)
  * Postgress
  
@@ -34,7 +34,7 @@ In above examples you need to replace:
  
 ## Step 3: Configure DB Upgrade in your Spring context
 Create a configuration file
-```
+```java
 @Configuration
 public class DbUpgradeConfig extends DbUpgradeConfigAdapter {
 
@@ -48,9 +48,8 @@ _NOTE: Potentially you can use it even without Spring Context, but you anyways w
 
 ## Step 4: Ensure DB upgrades will be done prior any other application work
 Configure this by adding TBD annotation like this
-```
-TBD
-```
+```java
+TBD```
 
 ## Step 5: Profit
 Thats it, you're ready to go.
