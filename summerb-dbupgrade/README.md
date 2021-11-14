@@ -29,7 +29,7 @@ Create a folder where upgrade scripts will be located, i.e.: `src/main/resources
  * For cases when you need to execute java code, file name should be in format `version_beanName.bean`. 
 
 In above examples you need to replace:
- * Replace `version` with your DB version, i.e. `001`. Application interprets `version` as `int` and sorts accordingly. Suggestion to name files with preceding zeros is purely for your convenience when looking at them in package explorer or in file browser.
+ * Replace `version` with your DB version, i.e. `001`. Application interprets `version` as `int` and sorts accordingly. Suggestion to specify version numbers with preceding zeros is purely for your convenience when looking at them in package explorer or in file browser.
  * Replace `beanName` with a bean name. Just make sure you register a bean that extends `UpgradePackageFactory`
  
 ### Step 3: Configure DB Upgrade in your Spring context
