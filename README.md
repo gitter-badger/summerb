@@ -12,12 +12,12 @@ Some of the mostly used libraries are:
  * [*Internationalization (i18n)*](summerb-i18n/README.md) - elementary primitives for user language agnostic messages
 
 A bit more rare, but still sometimes useful things:
- * *Security* - elementary primitives for handling Security-related topics in application (designed to be used in conjunction with Spring Security)
- * *Properties* - a persistent approach for handling business-objects properties (don't confuse with application properties)
- * *StringTemplate* - primitives for compiling string templates and evaluating them (default impl is based on SpEL)
- * *MiniCMS* - gives you locale-based functionality for working with text content
- * *Email* - primitives for sending emails
- * *Webboilerplate* - a set of heavily opinionated parts of Spring MVC application (I think I will tear down this soon)
+ * [*Security*](summerb-security/README.md) - elementary primitives for handling Security-related topics in application (designed to be used in conjunction with Spring Security)
+ * [*Properties*](summerb-properties/README.md) - a persistent approach for handling business-objects properties (don't confuse with application properties)
+ * [*StringTemplate*](summerb-stringtemplate/README.md) - primitives for compiling string templates and evaluating them (default impl is based on SpEL)
+ * [*MiniCMS*](summerb-minicms/README.md) - gives you locale-based functionality for working with text content
+ * [*Email*](summerb-email/README.md) - primitives for sending emails
+ * [*Webboilerplate*](summerb-webboilerplate/README.md) - a set of heavily opinionated parts of Spring MVC application (I think I will tear down this soon)
 
 # Designed for evolution
 Unlike some other tools, SummerB allows you to quickly bootstrap usual facilities in your application *AND allow you to evolve your application while gradually augmenting or replacing SummerB components*. 
